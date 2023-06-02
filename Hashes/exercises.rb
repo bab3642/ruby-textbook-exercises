@@ -62,8 +62,7 @@ hash = {
   e: 200
 }
 
-if (hash.select! { |k, v| v == 15050 })
-  v += 1
+if hash.select! { |k, v| v == 100 } 
   puts "Affirmative"
 else
   puts "Negative"
@@ -75,4 +74,13 @@ if hash.value?(100)
 else
   puts "Nope!"
 end
+
+#6 - the first hash has a key of :x whereas the second hash  has a key of "hi there"
+x = "hi there"
+my_hash = {x: "some value"}
+my_hash2 = {x => "some value"}
+
+#7 - NoMethodError: undefined method `keys' for Array - you tried to call the .keys method on Array. .keys is a Hash method.
+
+
 
